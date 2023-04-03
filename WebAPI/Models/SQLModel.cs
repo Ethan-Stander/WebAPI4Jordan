@@ -56,7 +56,7 @@ namespace WebAPI.Models
                 if (response.IsSuccessStatusCode)
                 {
                     string json = await response.Content.ReadAsStringAsync();
-                    List<String> users = JsonConvert.DeserializeObject<List<String>>(json);
+                    List<String> users = JsonConvert.DeserializeObject<List<string>>(json);
                     foreach (string user in users)
                     {
                         SQLModel.InsertUser(user);
